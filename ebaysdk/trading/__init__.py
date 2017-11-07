@@ -685,8 +685,8 @@ class Connection(BaseConnection):
             "X-EBAY-API-CALL-NAME": self.verb,
             "Content-Type": "text/xml"
         }
-        if self.config.get('iaf_token', None):
-            headers["X-EBAY-API-IAF-TOKEN"] = self.config.get('iaf_token')
+        if self.config.get('token', None):
+            headers["X-EBAY-API-IAF-TOKEN"] = self.config.get('token')
 
         return headers
 
